@@ -25,7 +25,7 @@ public class Etudiant extends Personne {
     }
 
     public String getNiveauEtudes() {
-        return niveauEtudes;
+        return niveauEtudes;//gg
     }
 
     public void inscrireCours(cours c) {
