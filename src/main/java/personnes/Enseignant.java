@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package personnes;
+import matiere.matiere;
 
 /**
  *
@@ -10,9 +11,11 @@ package personnes;
  */
 import java.util.ArrayList;
 
+import java.util.ArrayList;
+
 public class Enseignant extends Personne {
     private String specialite;
-    private ArrayList<matiere> listeMatieresEnseignes; // Remplacez `matieres` avec `String` si `matieres` n'est pas dÃ©fini
+    private ArrayList<matiere> listeMatieresEnseignes; // Supposons que `Matiere` est une classe définie
 
     // Constructeur
     public Enseignant(String id, String nom, String prenom, String email, String specialite) {
@@ -21,7 +24,7 @@ public class Enseignant extends Personne {
         this.listeMatieresEnseignes = new ArrayList<>(); // Initialisation de la liste
     }
 
-    // Getter et setter pour la spÃ©cialitÃ©
+    // Getter et setter pour la spécialité
     public String getSpecialite() {
         return specialite;
     }
@@ -30,16 +33,28 @@ public class Enseignant extends Personne {
         this.specialite = specialite;
     }
 
-    // MÃ©thode pour ajouter un cours enseignÃ©
+    // Méthode pour ajouter une matière enseignée
     public void ajouterMatiere(matiere m) {
         listeMatieresEnseignes.add(m);
     }
     
-   
-    
-
-    // MÃ©thode pour afficher la liste des cours enseignÃ©s
+    // Méthode pour afficher la liste des matières enseignées
     public void afficherMatiereEnseignes() {
-        System.out.println("Matiere enseignÃ©s par " + getNom() + " " + getPrenom() + " : " + listeMatieresEnseignes);
+        System.out.println("Matières enseignées par " + getNom() + " " + getPrenom() + " : " + listeMatieresEnseignes);
+    }
+
+    // Méthode toString pour afficher toutes les informations de l'enseignant
+    @Override
+    public String toString() {
+        return "Enseignant{" +
+               "ID='" + getId() + '\'' +
+               ", Nom='" + getNom() + '\'' +
+               ", Prénom='" + getPrenom() + '\'' +
+               ", Email='" + getEmail() + '\'' +
+               ", Spécialité='" + specialite + '\'' +
+               ", Matières enseignées=" + listeMatieresEnseignes +
+               '}';
     }
 }
+
+ 

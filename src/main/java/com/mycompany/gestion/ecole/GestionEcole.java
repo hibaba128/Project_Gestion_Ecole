@@ -4,6 +4,8 @@
  */
 
 package com.mycompany.gestion.ecole;
+import matiere.cours;
+import personnes.Enseignant;
 
 /**
  *
@@ -12,6 +14,9 @@ package com.mycompany.gestion.ecole;
 public class GestionEcole {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Enseignant enseignant1 = new Enseignant("123","Dupont", "Marie","osfpiji@gmail","proff");
+        cours cours1 = new cours("Mathématiques", enseignant1);
+         System.out.println(cours1);
+        
     }
 }

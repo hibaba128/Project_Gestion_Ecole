@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package personnes;
+import matiere.cours;
+import matiere.matiere;
 
 /**
  *
@@ -32,9 +34,9 @@ public class Etudiant extends Personne {
         listeCoursInscrits.add(c);
     }
 
-    public void ajouterCertificat(certificat ce) {
+   /* public void ajouterCertificat(certificat ce) {
         listeCertificats.add(ce);
-    }
+    }*/
 public void ajouterAbsence(Absence a){
     listeAbssences.add(a) ;
 }
@@ -49,3 +51,4 @@ public void ajouterAbsence(Absence a){
         System.out.println("les Absences : " + listeAbssences);
     }
 }
+///YA HIBAA ZID TOSTRINGGG
