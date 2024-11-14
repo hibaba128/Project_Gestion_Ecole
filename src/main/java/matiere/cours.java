@@ -7,6 +7,7 @@ import personnes.Enseignant;
 /**
  *
  * @author souis
+ * testtestetstestets git
  */
 public class cours {
     private static int compteurId = 0;  // Compteur pour générer les IDs
