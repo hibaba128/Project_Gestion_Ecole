@@ -54,4 +54,5 @@ public class document extends cours {
                "Nombre de pages: " + nbPages + "\n" +
                "Taille du document: " + taille + " KB";
     }
+    
 }
