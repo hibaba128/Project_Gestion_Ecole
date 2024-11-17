@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package matiere;
-import personnes.Etudiant
+import personnes.Etudiant ;
         /**
  *
  * @author souis

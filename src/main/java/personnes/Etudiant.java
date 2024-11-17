@@ -5,6 +5,7 @@
 package personnes;
 import matiere.cours;
 import matiere.matiere;
+import matiere.certificat ;
 
 /**
  *
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 public class Etudiant extends Personne {
     private String niveauEtudes;
     private ArrayList<cours> listeCoursInscrits;
-    private ArrayList<matiere> listeCertificats;
+    private ArrayList<certificat> listeCertificats;
     private ArrayList<Absence> listeAbssences ;
 
     public Etudiant(String id, String nom, String prenom, String email, String niveauEtudes) {
@@ -51,5 +52,17 @@ public void ajouterAbsence(Absence a){
     public void afficherAbsences() {
         System.out.println("les Absences : " + listeAbssences);
     }
+     @Override
+    public String toString() {
+        return "Etudiant {" +
+                "id='" + getId() + '\'' +
+                ", nom='" + getNom() + '\'' +
+                ", prenom='" + getPrenom() + '\'' +
+                ", email='" + getEmail() + '\'' +
+                ", niveauEtudes='" + niveauEtudes + '\'' +
+                ", listeCoursInscrits=" + listeCoursInscrits +
+                ", listeCertificats=" + listeCertificats +
+                ", listeAbsences=" + listeAbssences +
+                '}';
+    }
 }
-///YA HIBAA ZID TOSTRINGGG
