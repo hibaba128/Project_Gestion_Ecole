@@ -9,6 +9,7 @@ import matiere.matiere;
 /**
  *
  * @author souis
+ * 
  */
 import java.util.ArrayList;
 
