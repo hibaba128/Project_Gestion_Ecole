@@ -31,6 +31,7 @@ public class Etudiant extends Personne {
     public String getNiveauEtudes() {
         return niveauEtudes;//gg
     }
+    public ArrayList<Absence> getabsences(){return listeAbssences;}
 
     public void inscrireCours(cours c) {
         listeCoursInscrits.add(c);

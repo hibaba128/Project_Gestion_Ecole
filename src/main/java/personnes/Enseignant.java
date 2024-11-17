@@ -32,6 +32,8 @@ public class Enseignant extends Personne {
     public void setSpecialite(String specialite) {
         this.specialite = specialite;
     }
+    public ArrayList<matiere>  getlistematiere ()
+    { return listeMatieresEnseignes;}
 
     // Méthode pour ajouter une matière enseignée
     public void ajouterMatiere(matiere m) {

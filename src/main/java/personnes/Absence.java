@@ -3,8 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package personnes;
-import com.mycompany.gestion.ecole.Date;
+
 import matiere.cours;
+import java.util.Date;
 
 /**
  *
@@ -15,6 +16,14 @@ public class Absence {
     private String motif;
 private Date date;
  private cours cours;
+ 
+ 
+ public Absence(String idAbsence) {
+    this.idAbsence = idAbsence;
+    this.motif = null; // Initialisation par défaut
+    this.date = null;  // Initialisation par défaut
+    this.cours = null; // Initialisation par défaut
+}
 
     public Absence(String idAbsence, Date  date, String motif, cours cours) {
         this.idAbsence = idAbsence;

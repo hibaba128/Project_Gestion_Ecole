@@ -6,7 +6,7 @@ package personnes;
 import matiere.matiere;
 import matiere.cours; 
 import matiere.certificat; 
-        
+import personnes.Absence; 
 
 /**
  *
@@ -93,5 +93,55 @@ public class administrateur {
     public void ajouterCertificat(certificat certificat) {
         this.listeCertificats.add(certificat);
     }
-}
 
+     public void afficherProfsParMatiere(int idMatiere) {
+    // Vérifier si la liste des professeurs est vide
+    if (this.listeProfesseurs.isEmpty()) {
+        System.out.println("Aucun professeur enregistré.");
+        return;
+    }
+
+    boolean profTrouve = false;
+
+    // Parcourir la liste des professeurs
+    for (Enseignant enseignant : this.listeProfesseurs) {
+        // Parcourir la liste des matières de chaque professeur
+        for (matiere mat : enseignant.getlistematiere()) {
+            if (mat.getIdMatiere() == idMatiere) { // Comparer les IDs des matières
+                System.out.println("Professeur : " + enseignant.getNom());
+                profTrouve = true;
+                break; // Passer au prochain enseignant
+            }
+        }
+    }
+
+    if (!profTrouve) {
+        System.out.println("Aucun professeur n'enseigne cette matière.");
+    }
+}
+public void afficherEtudiantsAvecAbsences(int n) {
+        ArrayList<Absence> s = new ArrayList <Absence>();
+    // Vérifier si la liste des étudiants est vide
+    if (this.listeEtudiants.isEmpty()) {
+        System.out.println("Aucun étudiant enregistré.");
+        return;
+    }
+     
+
+    boolean etudiantTrouve = false;
+
+    // Parcourir la liste des étudiants
+    for (Etudiant etudiant : this.listeEtudiants) {
+        s= etudiant.getabsences();
+        
+        if (s.size() > n) {
+            System.out.println("Nom : " + etudiant.getNom() + ", Prénom : " + etudiant.getPrenom());
+            etudiantTrouve = true;
+        }
+    }
+
+    if (!etudiantTrouve) {
+        System.out.println("Aucun étudiant n'a plus de " + n + " absences.");
+    }
+}
+}
