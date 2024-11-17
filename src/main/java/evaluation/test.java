@@ -56,4 +56,9 @@ public class test extends evaluation {
                "Niveau de difficulté: " + niveauDifficulte + "\n" +
                "Cours de test: " + coursDeTest;
     }
+    @Override 
+     public void afficherTypeEvaluation() {
+        System.out.println("Type d'évaluation : Examen");
+    }
+
 }

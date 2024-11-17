@@ -11,10 +11,10 @@ import matiere.matiere;
  */
 import java.util.Date;
 
-public class evaluation {
-    private int idEvaluation;           // Identifiant unique pour chaque évaluation
-    private Date dateEvaluation;        // Date de l'évaluation
-    private matiere matiereEvaluation;  // Matière de l'évaluation
+public abstract class evaluation {
+    protected int idEvaluation;           // Identifiant unique pour chaque évaluation
+    protected  Date dateEvaluation;        // Date de l'évaluation
+    protected  matiere matiereEvaluation;  // Matière de l'évaluation
 
     // Constructeur
     public evaluation(int idEvaluation, Date dateEvaluation, matiere matiereEvaluation) {
@@ -55,5 +55,8 @@ public class evaluation {
                "Date de l'évaluation: " + dateEvaluation + "\n" +
                "Matière de l'évaluation: " + matiereEvaluation;
     }
+    
+    // Méthode abstraite (à implémenter dans les classes dérivées)
+    public abstract void afficherTypeEvaluation();
 }
 

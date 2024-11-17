@@ -47,5 +47,9 @@ public class examen extends evaluation {
                "Coefficient: " + coefficient + "\n" +
                "Liste des chapitres: " + listeDesChapitres;
     }
+    @Override 
+      public void afficherTypeEvaluation() {
+        System.out.println("Type d'évaluation : Examen");
+    }
 }
 

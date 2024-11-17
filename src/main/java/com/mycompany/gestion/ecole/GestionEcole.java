@@ -11,6 +11,8 @@ import personnes.Enseignant;
  *
  * @author souis
  */
+////LES INTERFACES FONCTIONELLES ET L EXPRESSION LAMBDA MA FHEMT WELOU 
+
 public class GestionEcole {
 
     public static void main(String[] args) {
