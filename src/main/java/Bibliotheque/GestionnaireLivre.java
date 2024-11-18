@@ -4,10 +4,9 @@
  */
 package Bibliotheque;
 
-/**
- *
- * @author user
- */
-public class Bibliotheque {
-    
+public class GestionnaireLivre implements OperationLivre {
+    @Override
+    public void executer(String livre) {
+        System.out.println("Gestionnaire traite le livre : " + livre);
+    }
 }

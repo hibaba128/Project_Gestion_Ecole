@@ -4,12 +4,7 @@
  */
 package Bibliotheque;
 
-/**
- *
- * @author user
- */
-public interface Gestionnaire<T> {
-     void ajouter(T objet);
-    void supprimer(T objet);
-    void afficher();
+@FunctionalInterface
+public interface OperationLivre {
+    void executer(String livre);
 }
