@@ -4,9 +4,15 @@
  */
 
 package com.mycompany.gestion.ecole;
+import evaluation.Resultat;
+import evaluation.examen;
+import evaluation.test;
+import java.util.Arrays;
+import java.util.List;
 import matiere.cours;
 import personnes.Enseignant;
 import personnes.Etudiant; 
+import matiere.matiere;
 import personnes.Absence;
 import personnes.administrateur;
 
@@ -19,7 +25,7 @@ import personnes.administrateur;
 public class GestionEcole {
 
     public static void main(String[] args) {
-        Etudiant e1 = new Etudiant ("123","Dupont", "Marie","osfpiji@gmail","proff");
+        /*Etudiant e1 = new Etudiant ("123","Dupont", "Marie","osfpiji@gmail","proff");
         Etudiant e3= new Etudiant("1234","ahmed", "saleh ","osfpiji@gmail","proff");
          Etudiant e2= new Etudiant ("14","ferdaws", "ines ","osfpiji@gmail","proff");
          Absence a = new Absence("120");
@@ -44,10 +50,29 @@ public class GestionEcole {
         admin.ajouterEtudiant(e2);
         admin.ajouterEtudiant(e3);
         
-        admin.afficherEtudiantsAvecAbsences(1);
+        admin.afficherEtudiantsAvecAbsences(1);*/
+        //tester l'enumeration 
+         matiere matiere1 = new matiere("Mathématiques", 3); // Exemple de classe matière
+        matiere matiere2 = new matiere("Physique", 2);
+
+        List<cours> chapitres = Arrays.asList(new cours("Chapitre 1"), new cours("Chapitre 2")); // Exemple de cours
+
+        examen exam1 = new examen(15, null, matiere1, (float) 0.75, chapitres);
+        test test1 = new test(12,null, matiere2, "Interrogation", 2, new cours("Chapitre 3"));
+
+        // Création de l'objet résultat
+        Resultat resultat = new Resultat();
+
+        // Ajouter les évaluations
+        resultat.ajouterEvaluation(exam1);
+        resultat.ajouterEvaluation(test1);
+
+        // Afficher les résultats
+        resultat.afficherResultats();
+    }
   
        
         
         
     }
-}
+

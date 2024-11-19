@@ -1,10 +1,11 @@
 evaluation\evaluation.class
 matiere\cours.class
-evaluation\resultat.class
 personnes\Personne.class
 matiere\video.class
 Bibliotheque\Livre.class
 matiere\matiere.class
+evaluation\Resultat.class
+evaluation\EtatEtudiant.class
 evaluation\examen.class
 personnes\Absence.class
 Bibliotheque\Bibliotheque.class

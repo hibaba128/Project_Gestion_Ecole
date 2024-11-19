@@ -58,7 +58,7 @@ public class test extends evaluation {
     }
     @Override 
      public void afficherTypeEvaluation() {
-        System.out.println("Type d'évaluation : Examen");
+        System.out.println("Type d'évaluation : Test");
     }
 
 }

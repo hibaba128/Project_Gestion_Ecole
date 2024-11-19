@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package evaluation;
+import java.util.ArrayList;
 import matiere.cours;
 import matiere.matiere;
 import java.util.Date;
@@ -14,18 +15,19 @@ import java.util.Date;
 import java.util.List;
 
 public class examen extends evaluation {
-    private int coefficient;
+    private float coefficient;
     private List<cours> listeDesChapitres;
 
     // Constructeur
-    public examen(int idEvaluation, Date dateEvaluation, matiere matiereEvaluation, int coefficient, List<cours> listeDesChapitres) {
+    public examen(int idEvaluation, Date dateEvaluation, matiere matiereEvaluation, float coefficient, List<cours> listeDesChapitres) {
         super(idEvaluation, dateEvaluation, matiereEvaluation);
         this.coefficient = coefficient;
         this.listeDesChapitres = listeDesChapitres;
     }
 
+
     // Getters et Setters
-    public int getCoefficient() {
+    public float getCoefficient() {
         return coefficient;
     }
 

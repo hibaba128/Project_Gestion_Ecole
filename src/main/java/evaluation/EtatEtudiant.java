@@ -8,6 +8,9 @@ package evaluation;
  *
  * @author souis
  */
-public class resultat {
-    
-}
+public enum EtatEtudiant {
+        REDOUBLANT,
+        RATTRAPAGE,
+        ADMIS
+    }
+

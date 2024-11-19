@@ -6,7 +6,8 @@ package personnes;
 import matiere.matiere;
 import matiere.cours; 
 import matiere.certificat; 
-import personnes.Absence; 
+import personnes.Absence;
+import evaluation.EtatEtudiant;
 
 /**
  *
@@ -20,7 +21,8 @@ public class administrateur {
     private ArrayList<Etudiant> listeEtudiants;
     private ArrayList<Enseignant> listeProfesseurs;
     private ArrayList<matiere> listeMatieres;
-    private Map<Integer, ArrayList<cours>> mapCoursParMatiere;
+    private Map <Etudiant, EtatEtudiant > resultatetudiants ; 
+
     private ArrayList<certificat> listeCertificats;
 
     // Constructeur
@@ -28,7 +30,8 @@ public class administrateur {
         this.listeEtudiants = new ArrayList<>();
         this.listeProfesseurs = new ArrayList<>();
         this.listeMatieres = new ArrayList<>();
-        this.mapCoursParMatiere = new HashMap<>();
+        this.resultatetudiants = new HashMap <>();
+     
         this.listeCertificats = new ArrayList<>();
     }
 
@@ -57,13 +60,9 @@ public class administrateur {
         this.listeMatieres = listeMatieres;
     }
 
-    public Map<Integer, ArrayList<cours>> getMapCoursParMatiere() {
-        return mapCoursParMatiere;
-    }
+    
 
-    public void setMapCoursParMatiere(Map<Integer, ArrayList<cours>> mapCoursParMatiere) {
-        this.mapCoursParMatiere = mapCoursParMatiere;
-    }
+   
 
     public ArrayList<certificat> getListeCertificats() {
         return listeCertificats;
@@ -86,9 +85,7 @@ public class administrateur {
         this.listeMatieres.add(matiere);
     }
 
-    public void ajouterCoursPourMatiere(int idMatiere, cours cours) {
-        this.mapCoursParMatiere.computeIfAbsent(idMatiere, k -> new ArrayList<>()).add(cours);
-    }
+   
 
     public void ajouterCertificat(certificat certificat) {
         this.listeCertificats.add(certificat);

@@ -22,6 +22,10 @@ public class cours {
         this.enseignant = enseignant;
     }
 
+    public cours(String chapitre_1) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     // Getters et Setters
     public int getIdCours() {
         return idCours;

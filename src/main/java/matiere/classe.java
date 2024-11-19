@@ -2,14 +2,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package matiere;
-import personnes.Etudiant ;
+
         /**
  *
  * @author souis
  */
+
+
+package matiere;
+
+import personnes.Etudiant;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class classe {
     private int idClasse;
@@ -49,9 +54,23 @@ public class classe {
         return listeEtudiants;
     }
 
+    // Méthode pour filtrer les étudiants par un critère (par exemple, le nom)
+    public List<Etudiant> filtrerEtudiantsParNom(String nom) {
+        return listeEtudiants.stream()
+                             .filter(etudiant -> etudiant.getNom().contains(nom))
+                             .collect(Collectors.toList());
+    }
+
+    // Méthode pour trier les étudiants par nom
+    public List<Etudiant> trierEtudiantsParNom() {
+        return listeEtudiants.stream()
+                             .sorted((e1, e2) -> e1.getNom().compareTo(e2.getNom()))
+                             .collect(Collectors.toList());
+    }
+
+   
     @Override
     public String toString() {
         return "Classe " + nomClasse + " (ID: " + idClasse + "), Nombre d'étudiants: " + listeEtudiants.size();
     }
 }
-

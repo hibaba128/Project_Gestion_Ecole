@@ -29,6 +29,10 @@ public class matiere {
         this.cours = new ArrayList<>();
     }
 
+    public matiere(String mathématiques, int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     // Getters et Setters
     public int getIdMatiere() {
         return idMatiere;

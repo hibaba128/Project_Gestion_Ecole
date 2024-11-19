@@ -22,6 +22,11 @@ public abstract class evaluation {
         this.dateEvaluation = dateEvaluation;
         this.matiereEvaluation = matiereEvaluation;
     }
+    public evaluation ( int idEvaluation , matiere matiereevaluation )
+            
+    {this.idEvaluation= idEvaluation ; 
+    this.dateEvaluation= null;
+    this.matiereEvaluation=matiereevaluation; }
 
     // Getters et Setters
     public int getIdEvaluation() {
